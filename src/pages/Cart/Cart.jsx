@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { PRODUCTS } from "../../Products";
@@ -7,8 +8,7 @@ import "./Cart.css"
 export default function Cart(props) {
 
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
-  const totalAmount = getTotalCartAmount()
-  /*   const totalAmount = getTotalCartAmount(); */
+  const totalAmount = getTotalCartAmount();
 
   const navigate = useNavigate();
 
